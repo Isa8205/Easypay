@@ -9,5 +9,7 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             form.save()
+    else:
+        print(form.errors)
 
     return render(request, 'signup.html', {'form': SignupForm()})
