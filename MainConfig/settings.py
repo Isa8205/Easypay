@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+v@5%@@+mpddu3bxg229we2qc7h#2+43^d@a@yx^5t3wyro0g6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.137.1', '127.0.0.1', '172.16.107.143', '172.16.109.41']
+ALLOWED_HOSTS = ['192.168.137.1', '127.0.0.1', '172.16.107.143', '172.16.109.41', '172.16.119.29']
 
 
 # Application definition
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     #My apps
     'authentication',
     'apis',
-    'rest_framework'
+    'rest_framework', 
+    'IsaTest'
 ]
 
 MIDDLEWARE = [
