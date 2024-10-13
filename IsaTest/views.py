@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from rest_framework import generics
 from .serializers import SaccosSerializer, VehiclesSerializer, DestinationsSerializer, RoutesSerializer, DriversSerializer, ConductorsSerializer
-from .models import Saccos
+from .models import Conductors, Destinations, Drivers, Routes, Saccos, Vehicles
 # Create your views here.
+
+def index(request):
+    return render(request, 'index.html')
 
 class SaccoView(generics.ListCreateAPIView):
     queryset = Saccos.objects.all()
@@ -14,42 +17,42 @@ class SaccoDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = SaccosSerializer
 
 class VehiclesView(generics.ListCreateAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Vehicles.objects.all()
     serializer_class = VehiclesSerializer
 
 class VehiclesDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Vehicles.objects.all()
     serializer_class = VehiclesSerializer
 
 class DestinationsView(generics.ListCreateAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Destinations.objects.all().select_related()
     serializer_class = DestinationsSerializer
 
 class DestinationsDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Destinations.objects.all().select_related()
     serializer_class = DestinationsSerializer
 
 class RoutesView(generics.ListCreateAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Routes.objects.all()
     serializer_class = RoutesSerializer
 
 class RoutesDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Routes.objects.all()
     serializer_class = RoutesSerializer
 
 class DriversView(generics.ListCreateAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Drivers.objects.all()
     serializer_class = DriversSerializer
 
 class DriversDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Drivers.objects.all()
     serializer_class = DriversSerializer
 
 class ConductorsView(generics.ListCreateAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Conductors.objects.all()
     serializer_class = ConductorsSerializer
 
 class ConductorsDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Saccos.objects.all()
+    queryset = Conductors.objects.all()
     serializer_class = ConductorsSerializer
 

@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from IsaTest import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name='landing_page'),
     path('apis/', include('apis.urls')),
     path('auth/', include('authentication.urls')),
     path('IsaTest/', include('IsaTest.urls')),
