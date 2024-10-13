@@ -1,0 +1,56 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <!-- Add your UI components here -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/location_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JUTMAR"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/location_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C5HI3H5"
+                android:textSize="15dp"
+                android:textColor="#FF5722"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="KSH 20"
+            android:textColor="#009688"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:id="@+id/location_price"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
