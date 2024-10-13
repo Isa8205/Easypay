@@ -45,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Loop J Dependency
+    implementation ("com.loopj.android:android-async-http:1.4.9")
 }
